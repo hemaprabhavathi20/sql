@@ -1,5 +1,5 @@
 # sql
-Challenge 1 - Steve's Car Showroom
+STEEL DATA Challenge 1 - Steve's Car Showroom
 
 Intro:
 Steve runs a top-end car showroom but his data analyst has just quit and left him without his crucial insights.
