@@ -144,3 +144,24 @@ WHERE Year(s.purchase_date) = '2022'
 GROUP BY sp.name,sp.age
 ORDER BY SUM(cost_$) DESC
 LIMIT 1
+--------------------
+#own question
+#11. What is the total revenue in each city for the year 2022 and 2023?
+SELECT sp.city , 
+        SUM(CASE WHEN EXTRACT(YEAR FROM purchase_date) = 2022 THEN cost_$ ELSE 0 END) AS total_revenue_2022,
+		SUM(CASE WHEN EXTRACT(YEAR FROM purchase_date) = 2023 THEN cost_$ ELSE 0 END) AS total_revenue_2023 from salespersons sp
+JOIN sales s
+on s.salesman_id=sp.salesman_id
+JOIN cars c
+ON c.car_id = s.car_id
+GROUP BY sp.city
+ORDER BY sp.city desc;
+--------------------
+#12. What is the average revenue among each city ?
+SELECT sp.CITY, round(AVG(cost_$),2) AS avg_revenue from salespersons sp
+JOIN sales s
+on s.salesman_id=sp.salesman_id
+JOIN cars c
+ON c.car_id = s.car_id
+GROUP BY sp.city
+ORDER BY sp.city desc;
