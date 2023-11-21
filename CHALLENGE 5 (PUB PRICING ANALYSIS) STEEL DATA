@@ -159,8 +159,8 @@ JOIN sales s ON p.pub_id = s.pub_id
 JOIN beverages b ON s.beverage_id = b.beverage_id
 ORDER BY s.transaction_date;
  -------------------
-#10. For each country, what is the average price per unit of beverages in each category, and 
-# what is the overall average price per unit of beverages across all categories?
+#10. For each country, what is the average price per unit of beverages in each category, and  what is the overall average price 
+per unit of beverages across all categories?
 WITH avg_price_perunit as
    (SELECT p.country,b.category,ROUND(AVG(b.price_per_unit),2) as avg_price FROM pubs p
 	JOIN sales s USING (pub_id)
@@ -177,8 +177,9 @@ SELECT a.country ,
        o.overall_avg FROM avg_price_perunit a
 JOIN overall_avg_price o using(country);
 -------------------
-#11. For each pub, what is the percentage contribution of each category of beverages to the total sales amount, and 
-#what is the pub's overall sales amount?
+#11. For each pub, what is the percentage contribution of each category of beverages to the total sales amount, and what is the
+pub's overall sales amount?
+
 WITH overall_sales_amt as(
      SELECT p.pub_name,
     SUM(b.price_per_unit * s.quantity) as sales_amount FROM sales s
