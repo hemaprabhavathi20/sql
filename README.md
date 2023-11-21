@@ -31,7 +31,7 @@ You have been tasked with analysing the drinks prices and sales to gain a greate
 
 Tables:
 
-
+![Screenshot (450)](https://github.com/hemaprabhavathi20/sql/assets/147178268/4cf40ed2-5195-4f70-b78b-30f0eaa36b61)
 
 **Questions:**
 1. How many pubs are located in each country??
