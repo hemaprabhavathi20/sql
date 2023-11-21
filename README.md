@@ -23,7 +23,7 @@ Tables
 10. What is the name and age of the salesperson who generated the highest revenue in the year 2022?
 -----------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------
-CHALLENGE - 5 PUBPRICING ANALYSIS
+****CHALLENGE - 5 PUBPRICING ANALYSIS****
 
 Intro:
 You are a Pricing Analyst working for a pub chain called 'Pubs "R" Us'
